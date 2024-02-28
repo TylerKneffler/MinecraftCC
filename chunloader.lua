@@ -15,7 +15,7 @@ for y = home.y, digto.y, -1 do
                 turtle.dig()
                 turtle.forward()
         end
-        if x == digto.x then
+        if x >= digto.x then
             if turn then
                 turtle.turnRight()
                 turtle.dig()
@@ -27,12 +27,13 @@ for y = home.y, digto.y, -1 do
                 turtle.forward()
                 turtle.turnLeft()
             end
+            turn = not turn
         end
     end
     if turtle.getFuelLevel() ~= "unlimited" and turtle.getFuelLevel() < 1 then
         turtle.refuel()
     end
-    if y == digto.y then
+    if y <= digto.y then
         turtle.turnRight()
         for index = 0, digto.x do
             turtle.forward()
