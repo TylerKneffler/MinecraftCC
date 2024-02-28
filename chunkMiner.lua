@@ -12,27 +12,23 @@ local turn = false
 for y = home.y, digto.y, -1 do
     for x = home.x, digto.x, 1 do
         for z = home.z, digto.z, 1 do
-            if z ~= digto.z then
-                turtle.dig()
-                turtle.forward()
-                print(x," ",y," ",z)
-            end
+            turtle.dig()
+            turtle.forward()
+            print(x," ",y," ",z)
         end
         print(x," ~= ",digto.x)
-        if x ~= digto.x then
-            if turn then
-                turtle.turnRight()
-                turtle.dig()
-                turtle.forward()
-                turtle.turnRight()
-            else 
-                turtle.turnLeft()
-                turtle.dig()
-                turtle.forward()
-                turtle.turnLeft()
-            end
-            turn = not turn
+        if turn then
+            turtle.turnRight()
+            turtle.dig()
+            turtle.forward()
+            turtle.turnRight()
+        else 
+            turtle.turnLeft()
+            turtle.dig()
+            turtle.forward()
+            turtle.turnLeft()
         end
+        turn = not turn
     end
     if turtle.getFuelLevel() ~= "unlimited" and turtle.getFuelLevel() < 1 then
         turtle.refuel()
