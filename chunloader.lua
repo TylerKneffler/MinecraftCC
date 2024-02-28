@@ -1,8 +1,8 @@
 args = {...}
 
-local home = vector.new(args[1].x,args[1].y,args[1].z)
-local current = vector.new(args[1].x,args[1].y,args[1].z)
-local digto = vector.new(args[2].x,args[2].y,args[2].z)
+local home = vector.new(args[1][0],args[1][1],args[1][2])
+local current = vector.new(args[1][0],args[1][1],args[1][2])
+local digto = vector.new(args[2][0],args[2][1],args[2][2])
 
 print(home)
 print(digto)
