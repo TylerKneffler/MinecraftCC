@@ -6,7 +6,6 @@ local digto = vector.new(args[1],args[2],args[3])
 print(home)
 print(digto)
 
-local finished = false
 local turn = true
 
 for y = home.y, digto.y, -1 do
@@ -16,7 +15,6 @@ for y = home.y, digto.y, -1 do
             turtle.forward()
             print(x," ",y," ",z)
         end
-        print(x," ~= ",digto.x)
         if turn then
             turtle.turnRight()
             turtle.dig()
