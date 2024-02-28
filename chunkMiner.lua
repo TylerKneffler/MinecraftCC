@@ -11,9 +11,11 @@ local turn = true
 for y = home.y, digto.y, -1 do
     for x = home.x, digto.x, 1 do
         for z = home.z, digto.z, 1 do
-            turtle.dig()
-            turtle.forward()
-            print(x," ",y," ",z)
+            if z < digto.z then
+                turtle.dig()
+                turtle.forward()
+                print(x," ",y," ",z)
+            end
         end
         print(x," ~= ",digto.x)
         if x < digto.x then
