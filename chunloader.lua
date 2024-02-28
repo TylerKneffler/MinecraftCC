@@ -4,15 +4,16 @@ local home = vector.new(arg[1].x,arg[1].y,arg[1].z)
 local current = vector.new(arg[1].x,arg[1].y,arg[1].z)
 local digto = vector.new(arg[2].x,arg[2].y,arg[2].z)
 
-local direction = {x = 0, z = 1}
+print(home)
+print(digto)
 
 local finished = false
 local turn = false
 while not finished do
 
-    for y = current.y, digto.y, -1 do
-        for x = current.x, digto.x, 1 do
-            for z = current.z, digto.z, 1 do
+    for y = home.y, digto.y, -1 do
+        for x = home.x, digto.x, 1 do
+            for z = home.z, digto.z, 1 do
                     turtle.dig()
                     turtle.forward()
             end
@@ -42,10 +43,6 @@ while not finished do
             turtle.digDown()
         end
     end
-
-    current.x = direction.x
-    current.z = direction.z
-
     if current == digto then
         break
     end
