@@ -16,6 +16,7 @@ for y = home.y, digto.y, -1 do
                 turtle.forward()
                 print(x," ",y," ",z)
         end
+        print(x," ~= ",digto.x)
         if x ~= digto.x then
             if turn then
                 turtle.turnRight()
