@@ -13,23 +13,20 @@ while not finished do
     for y = current.y, digto.y, -1 do
         for x = current.x, digto.x, 1 do
             for z = current.z, digto.z, 1 do
-                if turtle.detect() then
                     turtle.dig()
-                else 
                     turtle.forward()
-                end
             end
             if x == digto.x then
                 if turn then
-                    turtle.turRight()
+                    turtle.turnRight()
                     turtle.dig()
                     turtle.forward()
-                    turtle.turRight()
+                    turtle.turnRight()
                 else 
-                    turtle.turLeft()
+                    turtle.turnLeft()
                     turtle.dig()
                     turtle.forward()
-                    turtle.turLeft()
+                    turtle.turnLeft()
                 end
             end
         end
@@ -37,7 +34,7 @@ while not finished do
             turtle.refuel()
         end
         if y == digto.y then
-            turtle.turRight()
+            turtle.turnRight()
             for index = 0, digto.x do
                 turtle.forward()
             end
