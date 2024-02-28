@@ -15,18 +15,21 @@ for y = home.y, digto.y, -1 do
             turtle.forward()
             print(x," ",y," ",z)
         end
-        if turn then
-            turtle.turnRight()
-            turtle.dig()
-            turtle.forward()
-            turtle.turnRight()
-        else 
-            turtle.turnLeft()
-            turtle.dig()
-            turtle.forward()
-            turtle.turnLeft()
+        print(x," ~= ",digto.x)
+        if x ~= digto.x then
+            if turn then
+                turtle.turnRight()
+                turtle.dig()
+                turtle.forward()
+                turtle.turnRight()
+            else 
+                turtle.turnLeft()
+                turtle.dig()
+                turtle.forward()
+                turtle.turnLeft()
+            end
+            turn = not turn
         end
-        turn = not turn
     end
     if turtle.getFuelLevel() ~= "unlimited" and turtle.getFuelLevel() < 1 then
         turtle.refuel()
