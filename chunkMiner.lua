@@ -37,7 +37,7 @@ for y = home.y, digto.y, -1 do
         turtle.refuel()
     end
     turtle.turnRight()
-    for index = 1, digto.x -1 do
+    for i = 1, digto.x -1 do
         turtle.forward()
     end
     turtle.turnRight()
