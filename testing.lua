@@ -15,3 +15,4 @@ end
 home = location:new(nil,1,1,1)
 
 print(home.x," ",home.y," ",home.z)
+
