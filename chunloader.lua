@@ -14,6 +14,7 @@ for y = home.y, digto.y, -1 do
         for z = home.z, digto.z, 1 do
                 turtle.dig()
                 turtle.forward()
+                print(x," ",y," ",z)
         end
         if x >= digto.x then
             if turn then
