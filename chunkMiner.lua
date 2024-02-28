@@ -16,16 +16,18 @@ for y = home.y, digto.y, -1 do
                 turtle.forward()
                 print(x," ",y," ",z)
         end
-        if turn then
-            turtle.turnRight()
-            turtle.dig()
-            turtle.forward()
-            turtle.turnRight()
-        else 
-            turtle.turnLeft()
-            turtle.dig()
-            turtle.forward()
-            turtle.turnLeft()
+        if not x == digto.x then
+            if turn then
+                turtle.turnRight()
+                turtle.dig()
+                turtle.forward()
+                turtle.turnRight()
+            else 
+                turtle.turnLeft()
+                turtle.dig()
+                turtle.forward()
+                turtle.turnLeft()
+            end
         end
         turn = not turn
     end
@@ -37,6 +39,6 @@ for y = home.y, digto.y, -1 do
         turtle.forward()
     end
     turtle.turnRight()
-    turtle.down()
     turtle.digDown()
+    turtle.down()
 end
