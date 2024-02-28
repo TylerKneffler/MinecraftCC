@@ -29,8 +29,8 @@ for y = home.y, digto.y, -1 do
                 turtle.forward()
                 turtle.turnLeft()
             end
+            turn = not turn
         end
-        turn = not turn
     end
     if turtle.getFuelLevel() ~= "unlimited" and turtle.getFuelLevel() < 1 then
         turtle.refuel()
@@ -42,4 +42,5 @@ for y = home.y, digto.y, -1 do
     turtle.turnRight()
     turtle.digDown()
     turtle.down()
+    turn = false
 end
