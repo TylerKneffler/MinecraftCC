@@ -7,7 +7,7 @@ print(home)
 print(digto)
 
 local finished = false
-local turn = false
+local turn = true
 
 for y = home.y, digto.y, -1 do
     for x = home.x, digto.x, 1 do
@@ -40,5 +40,5 @@ for y = home.y, digto.y, -1 do
     turtle.turnRight()
     turtle.digDown()
     turtle.down()
-    turn = false
+    turn = true
 end
