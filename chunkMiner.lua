@@ -37,5 +37,6 @@ for y = home.y, digto.y, -1 do
         turtle.forward()
     end
     turtle.turnRight()
+    turtle.down()
     turtle.digDown()
 end
