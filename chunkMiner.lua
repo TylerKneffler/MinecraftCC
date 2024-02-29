@@ -91,3 +91,7 @@ for y = home.y, digto.y, -1 do
     turtle.down()
     turn = true
 end
+
+for y = current.y, home.y, 1 do
+        turtle.up()
+end
