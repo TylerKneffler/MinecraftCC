@@ -83,7 +83,6 @@ for y = home.y, digto.y, -1 do
     if ivFull() then
         resupply(current.x,current.y,current.z)
     end
-
     turtle.down()
     turn = true
 end
