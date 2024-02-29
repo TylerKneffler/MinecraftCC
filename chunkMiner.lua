@@ -11,7 +11,7 @@ local turn = true
 
 function ivFull()
     for i = 1,16 do
-        if turtle.getItemSpace(i) > 0 then
+        if turtle.getItemCount(i) > 0 then
         return false
         end
     end
@@ -36,6 +36,7 @@ function resupply(x,y,z)
         turtle.select(i)
         turtle.drop(64)
     end
+    turtle.select(1)
     
     turtle.turnRight()
     turtle.turnRight()
