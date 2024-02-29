@@ -45,7 +45,7 @@ function resupply(x,y,z)
     
     for y = current.y, home.y, 1 do
         if y ~= home.y then
-            turtle.down()
+            turtle.down() 
         end
     end
 end
