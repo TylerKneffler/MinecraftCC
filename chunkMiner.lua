@@ -28,7 +28,9 @@ end
 
 function resupply(x,y,z)
     for y = current.y, home.y, 1 do
-        turtle.up()
+        if y ~= home.y then
+            turtle.up()
+        end
     end
     turtle.turnRight()
     turtle.turnRight()
@@ -42,7 +44,9 @@ function resupply(x,y,z)
     turtle.turnRight()
     
     for y = current.y, home.y, 1 do
-        turtle.down()
+        if y ~= home.y then
+            turtle.down()
+        end
     end
 end
 
