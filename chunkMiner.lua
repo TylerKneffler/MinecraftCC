@@ -12,7 +12,7 @@ local turn = true
 function ivFull()
     for i = 1,16 do
         if turtle.getItemCount(i) > 0 then
-        return false
+            return false
         end
     end
     return true
